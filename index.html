@@ -1,23 +1,68 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯繫我 - 數位名片</title>
-    
-    <meta property="og:title" content="點擊添加我的微信，獲取最新資源" />
-    <meta property="og:description" content="長按掃碼，添加企業微信，歡迎隨時聯繫。" />
+    <title>聯絡我 - 數位名片</title>
+
+    <meta property="og:title" content="點擊此處與我聯繫" />
+    <meta property="og:description" content="這是我的數位名片，點擊跳轉或長按識別二維碼即可與我聯繫。" />
     <meta property="og:image" content="https://test-landing-page-w9bd.vercel.app/qrcode.jpg" />
+    <meta property="og:url" content="https://test-landing-page-w9bd.vercel.app" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <style>
-        body { font-family: sans-serif; background-color: #f9f9f9; text-align: center; padding: 40px 20px; }
-        img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h2 { color: #333; margin-bottom: 20px; }
+        .btn {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #0088cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        p { color: #666; font-size: 14px; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h2>請掃描下方二維碼添加我的企業微信</h2>
-    <img src="qrcode.jpg" alt="企業微信二維碼">
-    <p style="color: #777; margin-top: 20px;">長按二維碼，點擊「識別圖中二維碼」</p>
+
+    <div class="container">
+        <h2>聯絡我的數位名片</h2>
+        
+        <a href="https://t.me/TBB_Carbon_Global" class="btn">點擊添加我的 Telegram</a>
+
+        <p>或長按下方二維碼添加我的微信：</p>
+        <img src="qrcode.jpg" alt="微信二維碼">
+        <p>識別圖中二維碼，即可快速加好友</p>
+    </div>
+
 </body>
 </html>
+
