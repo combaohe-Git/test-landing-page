@@ -2,19 +2,43 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+    <!-- 確保在手機上顯示比例正常 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>抖音卡片測試頁面</title>
     
-    <meta property="og:title" content="這是一張測試卡片" />
-    <meta property="og:description" content="如果顯示正常，代表你的頁面成功被抖音抓取了！" />
-    <meta property="og:image" content="https://picsum.photos/400/300" />
+    <!-- 抖音/聊天框生成卡片的關鍵 (OG 標籤) -->
+    <meta property="og:title" content="點擊添加我的微信" />
+    <meta property="og:description" content="長按掃碼或複製ID，期待與你交流！" />
+    <!-- 這裡填入你想在卡片上顯示的縮圖（例如頭像） -->
+    <meta property="og:image" content="images/avatar.jpg" /> 
     
-    <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
-    </style>
+    <title>我的微信名片</title>
 </head>
-<body>
-    <h1>測試成功！</h1>
-    <p>如果抖音聊天框顯示了標題、描述和一張隨機風景圖，代表你的網頁已經具備卡片化資格。</p>
+<body style="font-family: sans-serif; background-color: #f9f9f9;">
+    
+    <div style="text-align: center; padding: 40px 20px;">
+        <h2>點擊下方按鈕複製ID</h2>
+        
+        <!-- 我稍微幫你的按鈕加了一點樣式，讓它看起來更像微信的綠色按鈕 -->
+        <button onclick="copyID()" style="padding: 15px 30px; font-size: 18px; background-color: #07c160; color: white; border: none; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            複製微信 ID：你的ID
+        </button>
+        
+        <div style="margin-top: 40px;">
+            <p style="color: #555; font-size: 16px;">或長按圖片儲存，打開微信掃一掃：</p>
+            <!-- 這裡填入你的微信二維碼圖片路徑 -->
+            <img src="images/qrcode.jpg" alt="微信二維碼" style="width: 250px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+
+    <script>
+    function copyID() {
+        // 請把下面引號裡的內容換成你真實的微信 ID
+        navigator.clipboard.writeText("你的真實微信ID").then(() => {
+            alert("✅ ID 已複製！請打開微信搜尋添加。");
+        }).catch(err => {
+            alert("複製失敗，請手動長按文字複製！");
+        });
+    }
+    </script>
 </body>
 </html>
